@@ -222,7 +222,7 @@ div h3{
     margin-bottom: 5px;
 }
 div h4{
-display: flex;
+    display: flex;
     justify-content: center;
     font-family: permanent_marker;
     background-color: #fffb98;
@@ -295,4 +295,33 @@ div p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.marcas{
+    background-color: #0d4e77;
+}
+.contenedor-marcas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.contenedor-marcas img{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border-style: solid;
+    border-color: #fffb98;
+    border-radius: 5%;
+    margin-bottom: 10px;
+}
+@media screen and (min-width: 1024px) {
+    .contenedor-marcas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        margin: 20px;
+        justify-items: center;
+    }
+    
 }
