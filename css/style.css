@@ -18,6 +18,7 @@ header div img{
     display: grid;
     grid-template-areas: 
     "header"
+    "titulo"
     "logo"
     "section"
     "footer";
@@ -29,19 +30,33 @@ header div img{
     .body-index{
         grid-template-areas: 
         "header header"
+        "titulo titulo"
         "logo logo"
         "section section"
         "footer footer";
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat( 1fr);
     }
     
 }
-
+header{
+    grid-area: header;
+    background-color: #ff8b08;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (min-width: 1024px) {
+    header{
+        display: inline;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+}
 .barra-incio{
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
-    background-color: #fffb98;
     border-radius: 5px;
     font-family: permanent_marker;
 }
@@ -51,35 +66,40 @@ header div img{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        background-color: #ff8b08;
     }
 }
-ul li{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    text-decoration: none;
-    margin-bottom: 5px;
+li{
     background-color: #fffb98;
     border-radius: 5px;
+    gap: 5px;
+    margin: 5px;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
     font-family: permanent_marker;
 }
 @media screen and (min-width: 1024px) {
-    .barra-lista{
+    .ul-lista {
         display: flex;
         flex-direction: row;
-        gap: 5px;
+        font-family: permanent_marker;
     }
+    
 }
-header{
-    grid-area: header;
-    background-color: #ff8b08;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-section{
+#banners{
     grid-area: section; 
     background-color: #fffb98;
+}
+@media screen and (min-width: 1024px) {
+    #banners {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    
 }
 .padre-banner{
     display: flex;
@@ -93,9 +113,10 @@ section{
     .padre-banner {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        gap: 10px;
-        margin: 40px;
+        text-align: center;
+        background-color: #fffb98;
     }
     
 }
@@ -117,12 +138,31 @@ footer img{
     margin-top: 5px;
     margin-bottom: 5px;
 }
+.estilo-index{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+p{
+    display: flex;
+    text-align: center;
+    font-family: permanent_marker;
+
+}
+@media screen and (min-width: 1024px) {
+    p{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+}
 .logo-index{
     grid-area: logo;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 
 .logo-index img{
     width: 320px;
@@ -232,10 +272,15 @@ div h4{
     margin-top: 5px;
     margin-bottom: 30px;
 }
+div h5{
+    font-family: permanent_marker;
+    font-size: 20px;
+}
 div p{
     background-color: #fffb98;
     border-radius: 5px;
     margin: 10px;
+    font-size: 15px;
 }
 .body-contacto{
     display: flex;
@@ -252,6 +297,18 @@ div p{
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    border: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+@media screen and (min-width: 1024px) {
+    .body-form{
+        border: solid;
+        border-color: black;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    
 }
 .celda{
     border-radius: 5px;
@@ -274,6 +331,17 @@ div p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: solid;
+    border-color: black;
+}
+@media screen and (min-width: 1024px) {
+    .informacion{
+        border: solid;
+        border-color: black;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
+    
 }
 .informacion ul li{
     font-size: 15px;
@@ -289,12 +357,24 @@ div p{
     border-radius: 5px;
     width: 304px;
     height: 154px;
+    margin-bottom: 5px;
 }
 .formulario{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #0d4e77;
+}
+@media screen and (min-width: 1024px) {
+    .formulario{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #0d4e77;
+    }
+    
 }
 .marcas{
     background-color: #0d4e77;
