@@ -300,15 +300,7 @@ div p{
     border: solid;
     border-color: black;
     border-radius: 5px;
-}
-@media screen and (min-width: 1024px) {
-    .body-form{
-        border: solid;
-        border-color: black;
-        border-radius: 5px;
-        margin: 5px;
-    }
-    
+    padding: 5px;
 }
 .celda{
     border-radius: 5px;
